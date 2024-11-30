@@ -1,0 +1,279 @@
+/* Estilos existentes */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    gap: 20px;
+}
+
+.logo {
+    flex-shrink: 0;
+    height: 80px;
+    width: auto;
+}
+
+.logo-video {
+    height: 100%;
+    width: auto;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color:yellow;
+}
+
+.social-media a img {
+    height: 20px;
+    margin-left: 10px;
+}
+
+.listen-button {
+    flex-shrink: 0;
+}
+
+.listen-button button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(249,2,2,1) 100%, rgba(0,212,255,1) 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.listen-button button:hover {
+    background: linear-gradient(45deg, rgb(2, 210, 247), rgb(252, 3, 231));
+    color: black;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 300px); /* Tenía -160 Si deseas reducir la altura del main y, por ende, del fondo, puedes ajustar este valor. Por ejemplo, si deseas que el fondo sea más pequeño, podrías reducir el valor de la resta*/
+    padding: 20px;
+    box-sizing: border-box;
+    background: url('/images/navidad7.png') no-repeat center center;
+    background-size: cover;
+}
+
+h2, p {
+    text-align: center;
+}
+
+.form-video {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+.app-download {
+    background-color: black;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.app-icons {
+    display: flex;
+    align-items: center;
+    animation: scroll 20s linear infinite;
+    gap: 20px;
+}
+
+.app-icons img {
+    height: 50px;
+}
+
+.app-icons h2 {
+    color: white;
+    font-size: 25px;
+    white-space: nowrap;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.text-contorno {
+    color: white; /* Color de la letra */
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000; /* Contorno negro */
+}
+
+footer {
+    background: linear-gradient(45deg, rgb(2, 210, 247), rgb(252, 3, 231));
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .social-media {
+    margin-bottom: 15px;
+}
+
+footer .social-media a img {
+    height: 35px;
+    margin: 0 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.component h2, .component p { 
+    color: white; /* Color de letra */ 
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo, .listen-button, nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .listen-button {
+        order: 2;
+    }
+
+    nav {
+        order: 3;
+    }
+
+    .logo {
+        order: 1;
+    }
+}
+
+  /* Estilos nuevos */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* es la que especifica el espacio entre los contenedores dentro de la clase */
+}
+
+.component {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+h2 {
+    color: #333333;
+}
+
+.whatsapp-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #25D366;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.whatsapp-link img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.qr-code {
+    width: 100%;
+    max-width: 200px;
+    margin: 20px 0;
+}
+
+.video-promo {
+    position: relative;
+}
+
+.video-promo img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-promo p {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .whatsapp-link img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .qr-code {
+        max-width: 150px;
+    }
+
+    .video-promo img {
+        border-radius: 5px;
+    }
+}

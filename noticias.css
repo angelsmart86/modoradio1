@@ -1,0 +1,241 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los elementos horizontalmente*/ 
+    align-items: center;
+    background: black;
+    padding: 10px 20px; /* Espaciado interno */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    gap: 20px; /* Espacio entre los elementos*/
+}
+
+.logo { 
+    flex-shrink: 0; /* Evita que el logo cambie de tamaño*/
+    height: 80px; /*AJUSTA EL TAMAÑO DEL LOGO*/
+    width: auto; /* Mantenga la proporción */ 
+}
+
+.logo-video { 
+    height: 100%; /* Ocupe todo el contenedor */ 
+    width: auto; /* Mantenga la proporción */ 
+}
+
+nav { 
+    flex-grow: 1; /* Permite que el menú ocupe espacio adicional */
+    text-align: center; /* Centra el texto del menú */
+}
+
+nav ul { /*AGREGADO*/
+    display: flex;
+    justify-content: center; /* Centra las opciones del menú horizontalmente */
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color:yellow;
+}
+
+.social-media a img {
+    height: 20px;
+    margin-left: 10px;
+}
+
+.listen-button { 
+    flex-shrink: 0; /* Mantiene el tamaño del botón fijo */
+}
+
+.listen-button button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(249,2,2,1) 100%, rgba(0,212,255,1) 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.listen-button button:hover {
+    background: linear-gradient(45deg, rgb(2, 210, 247), rgb(252, 3, 231));
+    color: black;
+}
+
+.banner {
+    background: linear-gradient(45deg, rgb(2, 210, 247), rgb(252, 3, 231));
+    color: white;
+    text-align: center;
+    padding: 30px 30px;
+}
+
+.show-info span {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(249,2,2,1) 100%, rgba(0,212,255,1) 100%);
+    padding: 15px 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.news-section {
+    padding: 20px;
+    background: black;
+}
+
+.news-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.news-card h3 {
+    margin: 15px;
+    font-size: 18px;
+    color: #222;
+}
+
+.news-card h3 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.news-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.news-card p {
+    margin: 0 15px 15px;
+    color: #555;
+    font-size: 14px;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-contorno {
+    color: white; /* Color de la letra */
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000; /* Contorno negro */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .news-card img {
+    height: 150px;
+    }
+}
+
+.app-download {
+    background-color: black;overflow: hidden; /* Oculta cualquier contenido fuera del área visible */
+    padding: 20px;
+}
+
+.app-icons {
+    display: flex; /* Alinea los elementos en línea horizontal */
+    align-items: center;
+    animation: scroll 25s linear infinite; /* Animación continua */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.app-icons img {
+    height: 50px; /* Ajusta el tamaño de las imágenes */
+}
+
+.app-icons h2 {
+    color: white; /* Color del texto */
+    font-size: 18px; /* Tamaño del texto */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%); /* Comienza fuera de la pantalla, a la derecha */
+    }
+    to {
+        transform: translateX(-100%); /* Termina fuera de la pantalla, a la izquierda */
+    }
+}
+
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(45deg, rgb(2, 210, 247), rgb(252, 3, 231));
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .social-media {
+    margin-bottom: 15px;
+}
+
+footer .social-media a img {
+    height: 35px;
+    margin: 0 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries for Mobile */ 
+@media (max-width: 768px) { 
+    header { 
+        flex-direction: column; 
+        align-items: center; 
+    } 
+    .logo, .listen-button { 
+        order: 1; /* Ordenar primero en dispositivos móviles */ 
+        width: 100%; 
+        text-align: center; 
+    } 
+    nav { 
+        order: 3; /* Ordenar tercero en dispositivos móviles */ 
+        width: 100%; 
+        text-align: center; 
+    } 
+    .listen-button { 
+        order: 2; /* Asegura que el botón se mantenga en la segunda posición */
+    }
+}
